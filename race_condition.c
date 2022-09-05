@@ -18,7 +18,7 @@ void *func()
 		pthread_mutex_lock(&lock); // to avoid race condition we add locks to code
 		mail++;
 		i++;
-		pthread_mutex_unlock(&lock);
+		pthread_mutex_unlock(&lock); // we must lock and unlock to avoid errors
 	}
 	return 0;
 }
